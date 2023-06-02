@@ -6,12 +6,8 @@ const defaultTheme = (localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme) ||
 export const ThemeProvider: React.FC = ({ children }) => {
     const [theme, setTheme] = useState<Theme>(defaultTheme);
 
-    const toggleTheme = () => {
-        setTheme(theme === Theme.DARK ? Theme.LIGHT : Theme.DARK);
-    };
-
     const contextProps = useMemo(() => {
-        return { theme, setTheme: toggleTheme };
+        return { theme, setTheme };
     }, [theme]);
 
     return <ThemeContext.Provider value={contextProps}>{children}</ThemeContext.Provider>;
