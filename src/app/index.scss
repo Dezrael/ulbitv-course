@@ -9,4 +9,10 @@
     font-family: var(--font-family-main);
     font-size: var(--font-size-m);
     min-height: 100vh;
+
+    display: flex;
+
+    .main-wrapper {
+        padding-left: 35px;
+    }
 }
