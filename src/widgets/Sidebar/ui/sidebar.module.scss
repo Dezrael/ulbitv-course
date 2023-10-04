@@ -1,4 +1,15 @@
 .sidebar {
-    width: var(--sidebar-width);
-    background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 50px;
+  padding: 50px 10px;
+  width: var(--sidebar-width);
+  background-color: var(--secondary-color);
+  transition: width 0.3s;
+}
+
+.collapsed {
+  width: var(--sidebar-width-collapsed);
 }
