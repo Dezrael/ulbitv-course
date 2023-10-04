@@ -1,10 +1,10 @@
 import { classNames } from "shared/utils";
-import cls from "./Button.module.scss";
+import cls from "./button.module.scss";
 import { ButtonHTMLAttributes, FC } from "react";
 
 export type ButtonType = "stretch";
 
-export type ButtonTheme = "clear";
+export type ButtonTheme = "clear" | "secondary";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
@@ -17,7 +17,7 @@ export const Button: FC<ButtonProps> = (props) => {
 
   return (
     <button
-      className={classNames(cls.Button, {}, [
+      className={classNames(cls.button, {}, [
         cls[buttonTheme],
         cls[buttonType],
         className,

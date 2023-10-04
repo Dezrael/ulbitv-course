@@ -8,6 +8,14 @@
   width: var(--sidebar-width);
   background-color: var(--secondary-color);
   transition: width 0.3s;
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-top: auto;
+  }
 }
 
 .collapsed {
