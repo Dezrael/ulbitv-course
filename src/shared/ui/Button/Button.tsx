@@ -3,12 +3,12 @@ import cls from "./button.module.scss";
 import { ButtonHTMLAttributes, FC } from "react";
 
 export enum ButtonType {
-  Stretch,
+  Stretch = "stretch",
 }
 
 export enum ButtonTheme {
-  Clear,
-  Secondary,
+  Clear = "clear",
+  Secondary = "secondary",
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {

@@ -9,6 +9,7 @@ export interface NavbarProps {
 
 export const Navbar: FC<NavbarProps> = () => {
   const { t } = useTranslation();
+
   return (
     <div className={cls.navbar}>
       <AppLink to="/">{t("Main page")}</AppLink>
