@@ -24,7 +24,11 @@ export const Sidebar: FC<SidebarProps> = (props) => {
         props.className,
       ])}
     >
-      <Button buttonTheme={ButtonTheme.Clear} onClick={onToggle}>
+      <Button
+        buttonTheme={ButtonTheme.Clear}
+        className={cls.toggler}
+        onClick={onToggle}
+      >
         {t("Toggle")}
       </Button>
       <div className={cls.bottom}>

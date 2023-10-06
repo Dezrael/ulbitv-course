@@ -11,7 +11,16 @@
   min-height: 100vh;
   display: flex;
 
+  .main-loader {
+    width: 100%;
+    height: 100vh;
+  }
+
   .main-wrapper {
     padding-left: 35px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 }
