@@ -2,9 +2,14 @@ import { classNames } from "shared/utils";
 import cls from "./button.module.scss";
 import { ButtonHTMLAttributes, FC } from "react";
 
-export type ButtonType = "stretch";
+export enum ButtonType {
+  Stretch,
+}
 
-export type ButtonTheme = "clear" | "secondary";
+export enum ButtonTheme {
+  Clear,
+  Secondary,
+}
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;

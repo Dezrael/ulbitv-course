@@ -1,18 +1,17 @@
-@import './styles/reset.scss';
-@import './styles/variables/global.scss';
-@import './styles/themes/dark.scss';
-@import './styles/themes/light.scss';
+@import "./styles/reset";
+@import "./styles/variables/global";
+@import "./styles/themes/dark";
+@import "./styles/themes/light";
 
 .app {
-    background-color: var(--bg-color);
-    color: var(--primary-color);
-    font-family: var(--font-family-main);
-    font-size: var(--font-size-m);
-    min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  font-family: var(--font-family-main);
+  font-size: var(--font-size-m);
+  min-height: 100vh;
+  display: flex;
 
-    display: flex;
-
-    .main-wrapper {
-        padding-left: 35px;
-    }
+  .main-wrapper {
+    padding-left: 35px;
+  }
 }
