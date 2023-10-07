@@ -1,6 +1,6 @@
 import "./index.scss";
 import { classNames, useTheme } from "shared/utils";
-import { AppRouter } from "./router";
+import { AppRouter } from "./AppRouter";
 import { Navbar } from "widgets/Navbar";
 import { Sidebar } from "widgets/Sidebar";
 import { Suspense } from "react";
@@ -15,7 +15,9 @@ const App = () => {
         <Sidebar />
         <div className="main-wrapper">
           <Navbar />
-          <AppRouter />
+          <div className="page-wrapper">
+            <AppRouter />
+          </div>
         </div>
       </Suspense>
     </div>

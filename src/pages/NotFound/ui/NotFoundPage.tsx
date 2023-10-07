@@ -1,10 +1,13 @@
 import { useTranslation } from "react-i18next";
-import cls from "./notFound.module.scss";
 
 export const NotFoundPage = () => {
   const { t } = useTranslation();
 
-  return <div className={cls["not-found"]}>{t("Page not found")}</div>;
+  return (
+    <div>
+      <h1>{t("Page not found")}</h1>
+    </div>
+  );
 };
 
 export default NotFoundPage;
