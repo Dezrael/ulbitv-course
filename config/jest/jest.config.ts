@@ -4,6 +4,7 @@
  */
 
 import type { Config } from "jest";
+import path from "path";
 
 const config: Config = {
   // The test environment that will be used for testing
@@ -38,6 +39,15 @@ const config: Config = {
 
   // The glob patterns Jest uses to detect test files
   testMatch: [`<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)`],
+
+  modulePaths: ["<rootDir>src"],
+
+  setupFilesAfterEnv: ["<rootDir>/config/jest/setupTests.ts"],
+
+  moduleNameMapper: {
+    "\\.s?css$": "identity-obj-proxy",
+    "\\.svg": path.resolve(__dirname, "jestEmptyComponent.tsx"),
+  },
 
   // A list of paths to directories that Jest should use to search for files in
   // roots: ["<rootDir>"],

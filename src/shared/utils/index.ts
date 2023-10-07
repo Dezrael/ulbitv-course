@@ -1,2 +1,2 @@
 export { classNames } from "./classNames/classNames";
-export { useTheme, ThemeProvider } from "./theme";
+export { useTheme, ThemeProvider } from "../providers/Theme";

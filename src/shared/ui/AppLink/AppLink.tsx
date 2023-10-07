@@ -2,7 +2,7 @@ import { FC } from "react";
 import { NavLink, NavLinkProps } from "react-router-dom";
 import cls from "./appLink.module.scss";
 import { classNames, useTheme } from "shared/utils";
-import { Theme } from "shared/utils/theme/ThemeContext";
+import { Theme } from "shared/providers/Theme/ThemeContext";
 
 export interface AppLinkProps extends NavLinkProps {
   className?: string;
