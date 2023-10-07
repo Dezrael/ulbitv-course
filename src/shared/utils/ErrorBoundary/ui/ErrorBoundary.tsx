@@ -1,8 +1,8 @@
-import React, { ErrorInfo, ReactNode } from "react";
-import { WithTranslation, withTranslation } from "react-i18next";
+import React, { ComponentType, ErrorInfo, ReactNode } from "react";
 
-export interface ErrorBoundaryProps extends WithTranslation {
+export interface ErrorBoundaryProps {
   children: ReactNode;
+  Fallback: ComponentType;
 }
 
 export interface ErrorBoundaryState {
@@ -27,19 +27,14 @@ class ErrorBoundary extends React.Component<
   }
 
   render() {
-    const { t } = this.props;
+    const { Fallback } = this.props;
 
     if (this.state.errorMessage) {
-      return (
-        <>
-          <h1>{t("Unexpected error")}</h1>
-          <h2>{`${this.state.errorMessage}`}</h2>
-        </>
-      );
+      return <Fallback>{`${this.state.errorMessage}`}</Fallback>;
     }
 
     return this.props.children;
   }
 }
 
-export default withTranslation()(ErrorBoundary);
+export default ErrorBoundary;
