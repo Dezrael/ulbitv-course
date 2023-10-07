@@ -3,7 +3,7 @@ import { AboutPage } from "pages/AboutPage";
 import { MainPage } from "pages/MainPage";
 import { AppRoutes, RoutePaths } from "shared/routePaths";
 import { NotFoundPage } from "pages/NotFoundPage";
-import { ErrorBoundary } from "shared/utils/ErrorBoundary";
+import { ErrorBoundary } from "shared/providers/ErrorBoundary";
 import { ErrorPage } from "pages/ErrorPage";
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
